@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>feather</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="2" transform="translate(-1132.000000, -66.000000)" stroke="#FFFFFF" stroke-width="0.9">
+            <g id="had" transform="translate(120.000000, 44.000000)">
+                <g id="Group-2" transform="translate(993.000000, 11.000000)">
+                    <g id="feather" transform="translate(20.000000, 11.000000)">
+                        <path d="M10.944,6.95809524 C12.3506693,5.50676981 12.3506693,3.15370638 10.944,1.70238095 C9.53733074,0.251055528 7.25666926,0.251055528 5.85,1.70238095 L1.8,5.88095238 L1.8,11.1428571 L6.9,11.1428571 L10.944,6.95809524 Z" id="Shape"></path>
+                        <path d="M8.4,4.33333333 L0,13" id="Shape"></path>
+                        <path d="M9,8.66666667 L4.2,8.66666667" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

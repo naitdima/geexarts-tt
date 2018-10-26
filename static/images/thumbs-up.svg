@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>thumbs-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5" stroke-linecap="round" stroke-linejoin="round">
+        <g id="2" transform="translate(-254.000000, -65.000000)" stroke="#FFFFFF" stroke-width="1.2">
+            <g id="had" transform="translate(120.000000, 44.000000)">
+                <g id="Group">
+                    <g id="Group-7">
+                        <g id="Group-2" transform="translate(115.000000, 11.000000)">
+                            <g id="thumbs-up" transform="translate(20.000000, 11.000000)">
+                                <path d="M7.2,4.2 L7.2,1.8 C7.2,0.80588745 6.39411255,8.8817842e-17 5.4,-4.4408921e-16 L3,5.4 L3,12.0000778 L9.768,12 C10.366372,12.0067646 10.8782767,11.5716457 10.968,10.98 L11.796,5.58 C11.8488336,5.23191319 11.7461383,4.87818528 11.5151151,4.6125086 C11.2840919,4.34683192 10.948051,4.19601321 10.596,4.2 L7.2,4.2 Z M3,12 L1.2,12 C0.5372583,12 0,11.4627417 0,10.8 L0,6.6 C-1.33226763e-16,5.9372583 0.5372583,5.4 1.2,5.4 L3,5.4 L3,12 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
