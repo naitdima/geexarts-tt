@@ -1,10 +1,13 @@
 <template>
-  <div id="app">
-
-  </div>
+  <PageHome/>
 </template>
 <script>
-  export default {
-    name: 'app'
-  }
+import PageHome from '@/pages/PageHome';
+
+export default {
+  name: 'app',
+  components: {
+    PageHome,
+  },
+};
 </script>
