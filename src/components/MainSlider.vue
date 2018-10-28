@@ -3,30 +3,55 @@
 
   +b.mainslider
     +e.UL.list
-      +e.LI.item_hongkong
-        +e.item-text-wrap
-          +e.B.item-promo-title Opens with Show
-          +e.H2.item-title Hong Kong Fashion Week
-          +e.item-links-wrap
-            +e.item-link(href="#") Producing Perfume From Home
-            +e.item-link(href="#") The 10 Commandments
-        +e.item-img-wrap
-          IMG(class="mainslider__item-img" src="/static/images/slide-1.jpg")
-          +e.item-img-ball
-          +e.item-img-text
-      +e.LI.item_prada
-        +e.H2.item-title <span>Prada</span> Factory
-        +e.item-img-wrap
-          IMG(class="mainslider__item-img" src="/static/images/slide-2.jpg")
-        +e.P.item-text Choosing An Antiaging Eye Cream
-        +e.item-location
-          +e.item-link(href="#") Magazyny
-          +e.TIME.item-time(datetime="2017-05-08T00:06") 08 maja 2017, 00:06
+      transition(name="current" appear)
+        +e.LI.item_hongkong._current(key="0")
+          +e.item-wrap
+            +e.item-text-wrap
+              +e.B.item-promo-title Opens with Show
+              +e.H2.item-title Hong Kong Fashion Week
+              +e.item-links-wrap
+                +e.item-link(href="#") Producing Perfume From Home
+                +e.item-link(href="#") The 10 Commandments
+            +e.item-img-wrap
+              IMG(class="mainslider__item-img" src="/static/images/slide-1.jpg")
+              +e.item-img-ball
+              +e.item-img-text
+      transition(name="next" appear)
+        +e.LI.item_prada._next(@click="toggleCurrentItem" key="1")
+          +e.H2.item-title <span>Prada</span> Factory
+          +e.item-img-wrap
+            IMG(class="mainslider__item-img" src="/static/images/slide-2.jpg")
+          +e.item-text-wrap
+            +e.P.item-text Choosing An Antiaging Eye Cream
+            +e.item-location
+              +e.item-link(href="#") Magazyny
+              +e.TIME.item-time(datetime="2017-05-08T00:06") 08 maja 2017, 00:06
 </template>
 
 <script>
 export default {
   name: 'MainSlider',
+  data() {
+    return {
+      nextItemIsShow: false,
+    };
+  },
+  methods: {
+    toggleCurrentItem(e) {
+      const nextItem = e.currentTarget;
+      const currentItem = document.querySelector('.mainslider__item_current');
+
+      if (!this.nextItemIsShow) {
+        currentItem.style.transform = 'translateX(-270px)';
+        nextItem.style.transform = 'translateX(-270px)';
+        this.nextItemIsShow = true;
+      } else {
+        currentItem.style.transform = 'translateX(0)';
+        nextItem.style.transform = 'translateX(0)';
+        this.nextItemIsShow = false;
+      }
+    },
+  },
 };
 </script>
 
@@ -38,33 +63,40 @@ export default {
       position relative
       width 100%
       height 850px
-      overflow-x scroll
-      margin 0
-      padding 0
-      padding-left 110px
-      list-style-type none
+      overflow hidden
 
     &__item
-      position relative
+      top 0
+      height 100%
+      position absolute
       color #fff
+      transition 1s
 
-      &_hongkong
-        display flex
-        margin-right 125px
-        padding-left 340px
+      &_current
+        width 100%
+        left 0
 
-      &_prada
-        display flex
+      &_next
+        width 520px
+        right -220px
         flex-direction column
         align-items center
         padding-left 130px
+        transition all 1s
+
+        &:hover
+          transform scale(1.05)
+
+    &__item-wrap
+      position relative
+      width 100%
+      height 100%
 
     &__item_hongkong &__item-text-wrap
       position absolute
-      bottom 60px
-      left 0
+      bottom 120px
+      left 110px
       height 225px
-      // max-width 300px
       transform rotate(-90deg) translateY(100%)
       transform-origin bottom left
 
@@ -76,7 +108,6 @@ export default {
       font-weight 400
 
     &__item_hongkong &__item-title
-      margin 0
       margin-bottom 45px
       color #4C4C4C
       font-size 56px
@@ -101,8 +132,10 @@ export default {
         border-right 1px solid rgba(107, 107, 107, 0.42)
 
     &__item_hongkong &__item-img-wrap
-      position relative
-      margin-top 70px
+      position absolute
+      top 70px
+      left 50%
+      transform translateX(-50%)
 
     &__item_hongkong &__item-img-ball
       position absolute
@@ -119,7 +152,6 @@ export default {
       position absolute
       top 70px
       left 0
-      margin 0
       font-weight 400
       color #000
       font-size 72px
@@ -132,8 +164,10 @@ export default {
       margin-bottom 35px
       padding-top 135px
 
+    &__item_prada &__item-text-wrap
+      width 300px
+
     &__item_prada &__item-text
-      margin 0
       margin-bottom 5px
       font-size 28px
       line-height 42px
@@ -141,6 +175,7 @@ export default {
 
     &__item_prada &__item-location
       display flex
+      justify-content center
 
     &__item_prada &__item-link
       position relative
@@ -170,4 +205,23 @@ export default {
       font-size 10px
       line-height 31px
       text-transform uppercase
+
+
+    .current-enter
+      transform translateX(-5000px)
+
+    .current-enter-to
+      transform translateX(0)
+
+    .current-enter, .current-enter-to
+      transition 1.6s
+
+    .next-enter
+      transform translateX(-5000px)
+
+    .next-enter-to
+      transform translateX(0)
+
+    .next-enter, .next-enter-to
+      transition 1s
 </style>

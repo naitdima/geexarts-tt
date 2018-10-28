@@ -136,9 +136,6 @@ export default {
       margin-right 30px
 
     &__links-list
-      margin 0
-      padding 0
-      list-style-type none
       display flex
       flex-wrap wrap
       width 170px

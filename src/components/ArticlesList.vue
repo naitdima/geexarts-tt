@@ -39,15 +39,12 @@ export default {
     display flex
     justify-content center
     flex-wrap wrap
-    margin 0
-    padding 0
-    list-style-type none
-    background-color #000
-    color #fff
 
     &__item
-      width 250px
+      width 251px
       padding 20px
+      color #fff
+      background-color #000
 
     &__item:not(:last-child) &__item-wrap
       border-right 1px solid rgba(67, 70, 94, 0.66)
@@ -61,7 +58,6 @@ export default {
       width 170px
 
     &__item-title
-      margin 0
       font-size 12px
       line-height 15px
       font-weight 400
