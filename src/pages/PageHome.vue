@@ -23,5 +23,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .page-home
+    background linear-gradient(to right, #000000 50%, #C0C4CB 50%)
 
+    &__navbar
+      margin-bottom 30px
 </style>
